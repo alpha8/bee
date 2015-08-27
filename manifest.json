@@ -1,0 +1,36 @@
+﻿{
+	"content_security_policy": "script-src 'self'; object-src 'self';",
+	"content_scripts": [ {
+		"all_frames": true,
+		"exclude_globs": [  ],
+		"exclude_matches": [  ],
+		"include_globs": [  ],
+		"css":["libs/jbox.css","libs/bootstrap.min.css"],
+		"js": [ "libs/jquery.js","libs/jquery.jBox-2.3.min.js","libs/bootstrap.min.js","libs/jquery.jBox-zh-CN.js","bee_helper.js"],
+		"matches": [ "https://www.szjzz.gov.cn/index/manage/residence/residenceManage/*", "http://www.szjzz.gov.cn/index/manage/residence/residenceManage/*" ],
+		"run_at": "document_idle"
+	} ],
+	"browser_action": {
+		"default_icon":"icons/icon_32.png",
+		"default_popup":"popup.html",
+		"default_title":"居住证网络助手"
+	},
+	"description": "居住证网络助手 Powered by Alpha.",
+	"key": "7k6gnXVACvUPU2DfslJgSrWJTHqIg5uwd+Kgl/5zSg==",
+	"name": "居住证网络助手",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"icons": {
+		"16": "icons/icon_16.png",
+		"32": "icons/icon_32.png",
+		"48": "icons/icon_48.png",
+		"128": "icons/icon_128.png"
+	},
+	"homepage_url": "http://user.qzone.qq.com/308367309",
+	"permissions": [ "https://www.szjzz.gov.cn/*", "http://www.szjzz.gov.cn/*", "notifications", "webRequest","webRequestBlocking"],
+   "update_url": "http://user.qzone.qq.com/308367309",
+   "background": {
+	"page": "background.html"
+  },
+  "minimum_chrome_version": "18.0"
+}
